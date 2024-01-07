@@ -7,7 +7,7 @@ const Container = styled.div`
   
   width: 1120px;
   padding: 2rem 0;
-  background-color: green;
+
 `
 
 const Content = styled.div`
