@@ -1,9 +1,21 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 const Container = styled.div`
-display: flex;
-justify-content: center;
-  /* padding: 2rem 0; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 `
 
-export { Container }
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  padding: 0 1rem;
+`
+const Content = styled.main`
+  display: flex;
+  justify-content: center;
+  width: 1120px;
+  padding: 0 1rem;
+`
+
+export { Container, Wrapper, Content }

@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components"
+import styled, { css } from 'styled-components'
 
 interface ContainerButton {
   background?: string
@@ -19,8 +19,6 @@ const ContainerButton = styled.button<ContainerButton>`
     border: none;
     border-radius: 0.375rem;
     gap: 0.25rem;
-
-
   `}
 `
 

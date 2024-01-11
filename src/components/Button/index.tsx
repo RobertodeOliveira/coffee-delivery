@@ -8,10 +8,15 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   // color?: string
 }
 
-export const Button = ({ children, background, size, ...props }: ButtonProps) => {
+export const Button = ({
+  children,
+  background,
+  size,
+  ...props
+}: ButtonProps) => {
   return (
     <S.ContainerButton background={background} fontSize={size} {...props}>
       {children}
     </S.ContainerButton>
   )
-} 
+}
