@@ -15,7 +15,6 @@ const Content = styled.main`
   display: flex;
   justify-content: center;
   width: 1120px;
-  padding: 0 1rem;
 `
 
 export { Container, Wrapper, Content }
