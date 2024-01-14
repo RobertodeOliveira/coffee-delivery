@@ -59,7 +59,7 @@ const ContentInstructions = styled.div`
 const WrapperInstrutions = styled.div`
   display: flex;
   flex-direction: column;
-
+  flex-wrap: wrap;
   gap: 1rem;
 `
 

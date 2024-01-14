@@ -3,6 +3,46 @@ import coffee from '../../assets/Imagem.svg'
 import { Chip } from '../Chip'
 import { Coffee, Package, ShoppingCart, Timer } from 'phosphor-react'
 
+type ContentCardList = {
+  text: string
+  icon: React.ReactNode
+}
+
+const contentCard: ContentCardList[] = [
+  {
+    text: 'Compra simples e segura',
+    icon: (
+      <Chip variant="secondary" borderRadius="1000px">
+        <ShoppingCart size={22} weight="fill" color="white" />
+      </Chip>
+    ),
+  },
+  {
+    text: 'Entrega rápida e rastreada',
+    icon: (
+      <Chip variant="secondary_ligth" borderRadius="1000px">
+        <Timer size={22} weight="fill" color="white" />
+      </Chip>
+    ),
+  },
+  {
+    text: 'Embalagem mantém o cagé intacto',
+    icon: (
+      <Chip variant="terciary" borderRadius="1000px">
+        <Package size={22} weight="fill" color="white" />
+      </Chip>
+    ),
+  },
+  {
+    text: 'O café chega fresquinho até você',
+    icon: (
+      <Chip variant="primary" borderRadius="1000px">
+        <Coffee size={22} weight="fill" color="white" />
+      </Chip>
+    ),
+  },
+]
+
 export const BannerSection = () => {
   return (
     <S.Container>
@@ -15,33 +55,14 @@ export const BannerSection = () => {
           </S.Text>
           <S.Instrutions>
             <S.WrapperInstrutions>
-              <S.ContentInstructions>
-                <Chip variant="secondary" borderRadius="1000px">
-                  <ShoppingCart size={22} weight="fill" color="white" />
-                </Chip>
-                <S.Text>Compra simples e segura</S.Text>
-              </S.ContentInstructions>
-              <S.ContentInstructions>
-                <Chip variant="secondary_ligth" borderRadius="1000px">
-                  <Timer size={22} weight="fill" color="white" />
-                </Chip>
-                <S.Text>Entrega rápida e rastreada</S.Text>
-              </S.ContentInstructions>
-            </S.WrapperInstrutions>
-
-            <S.WrapperInstrutions>
-              <S.ContentInstructions>
-                <Chip variant="terciary" borderRadius="1000px">
-                  <Package size={22} weight="fill" color="white" />
-                </Chip>
-                <S.Text>Embalagem mantém o café intacto</S.Text>
-              </S.ContentInstructions>
-              <S.ContentInstructions>
-                <Chip variant="primary" borderRadius="1000px">
-                  <Coffee size={22} weight="fill" color="white" />
-                </Chip>
-                <S.Text>O café chega fresquinho até você</S.Text>
-              </S.ContentInstructions>
+              {contentCard.map((item) => {
+                return (
+                  <S.ContentInstructions key={item.text}>
+                    {item.icon}
+                    <S.Text>{item.text}</S.Text>
+                  </S.ContentInstructions>
+                )
+              })}
             </S.WrapperInstrutions>
           </S.Instrutions>
         </S.Content>
