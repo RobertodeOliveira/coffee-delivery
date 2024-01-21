@@ -6,12 +6,10 @@ export const Pages = () => {
   return (
     <>
       <S.Container>
-        <S.Wrapper>
-          <Header />
-        </S.Wrapper>
-        <S.Content>
-          <Outlet />
-        </S.Content>
+        <Header />
+        {/* <S.Content> */}
+        <Outlet />
+        {/* </S.Content> */}
       </S.Container>
     </>
   )

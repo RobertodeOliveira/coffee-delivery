@@ -12,32 +12,32 @@ const contentCard: ContentCardList[] = [
   {
     text: 'Compra simples e segura',
     icon: (
-      <Chip variant="secondary" borderRadius="1000px">
-        <ShoppingCart size={22} weight="fill" color="white" />
+      <Chip variant="yellowDark" borderRadius="1000px">
+        <ShoppingCart size={16} weight="fill" color="white" />
       </Chip>
     ),
   },
   {
     text: 'Entrega rápida e rastreada',
     icon: (
-      <Chip variant="secondary_ligth" borderRadius="1000px">
-        <Timer size={22} weight="fill" color="white" />
+      <Chip variant="yellow" borderRadius="1000px">
+        <Timer size={16} weight="fill" color="white" />
       </Chip>
     ),
   },
   {
     text: 'Embalagem mantém o cagé intacto',
     icon: (
-      <Chip variant="terciary" borderRadius="1000px">
-        <Package size={22} weight="fill" color="white" />
+      <Chip variant="text" borderRadius="1000px">
+        <Package size={16} weight="fill" color="white" />
       </Chip>
     ),
   },
   {
     text: 'O café chega fresquinho até você',
     icon: (
-      <Chip variant="primary" borderRadius="1000px">
-        <Coffee size={22} weight="fill" color="white" />
+      <Chip variant="purple" borderRadius="1000px">
+        <Coffee size={16} weight="fill" color="white" />
       </Chip>
     ),
   },
@@ -53,6 +53,7 @@ export const BannerSection = () => {
             Com o Coffee Delivery você recebe seu café onde estiver, a qualquer
             hora
           </S.Text>
+          {/* Highlights */}
           <S.Instrutions>
             <S.WrapperInstrutions>
               {contentCard.map((item) => {

@@ -1,10 +1,14 @@
 import { BannerSection } from '../../components/BannerSection'
-import * as S from './styles'
+import { CardCoffee } from '../../components/CardCoffee'
+// import * as S from './styles'
 
 export const Home = () => {
   return (
-    <S.Container>
+    // <S.Container>
+    <>
       <BannerSection />
-    </S.Container>
+      <CardCoffee />
+    </>
+    // </S.Container>
   )
 }

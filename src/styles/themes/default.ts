@@ -1,24 +1,29 @@
 export const defaultTheme = {
   colors: {
-    'yellow-dark': '#C47F17',
-    yellow: '#DBAC2C',
-    'yellow-ligth': '#F1E9C9',
-    'purple-dark': '#4B2995',
-    purple: '#8047F8',
-    'purple-light': '#EBE5F9',
-
-    'base-title': '#272221',
-    'base-subtitle': '#403937',
-    'base-text': '#574F4D',
-    'base-label': '#8D8686',
-    'base-hover': '#D7D5D5',
-    'base-button': '#E6E5E5',
-    'base-input': '#EDEDED',
-    'base-card': '#F3F2F2',
-    background: '#FAFAFA',
-    white: '#FFFFFF',
+    brand: {
+      yellowDark: '#C47F17',
+      yellow: '#DBAC2C',
+      yellowLight: '#F1E9C9',
+      purpleDark: '#4B2995',
+      purple: '#8047F8',
+      purpleLight: '#EBE5F9',
+      text: '#574F4D',
+    },
+    base: {
+      yellowDark: '#C47F17',
+      title: '#272221',
+      subtitle: '#403937',
+      text: '#574F4D',
+      label: '#8D8686',
+      hover: '#D7D5D5',
+      button: '#E6E5E5',
+      input: '#EDEDED',
+      card: '#F3F2F2',
+      background: '#FAFAFA',
+      white: '#FFFFFF',
+    },
   },
-  'font-size': {
+  fontSizes: {
     xg: '48px',
     xxl: '32px',
     xl: '24px',
@@ -27,9 +32,9 @@ export const defaultTheme = {
     sm: '14px',
     xs: '12px',
     xxs: '10px',
-  },
+  } as const,
   font: {
     regular: 'Roboto',
     title: "'Baloo 2'",
-  } as const,
-}
+  },
+} as const

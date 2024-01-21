@@ -1,28 +1,37 @@
 import styled, { css } from 'styled-components'
 import { ChipVariants } from '.'
+import { defaultTheme } from '../../styles/themes/default'
+
+export type Colors = keyof typeof defaultTheme.colors.base
+export type FontSizes = keyof typeof defaultTheme.fontSizes
 
 interface ContaineProps {
-  color?: string
-  borderRadius?: string
-  variant: ChipVariants
-}
-
-const chipVariants = {
-  primary: '#8047F8',
-  secondary: '#C47F17',
-  secondary_dark: '#C47F17',
-  secondary_ligth: '#DBAC2C',
-  terciary: '#574F4D',
-  quaternary: '#8047F8',
+  $padding: string
+  $borderRadius?: string
+  weigth?: number
+  fontSize: FontSizes
+  color?: Colors
+  $variant: ChipVariants
 }
 
 const Container = styled.div<ContaineProps>`
-  ${({ color, variant, borderRadius }) => css`
+  ${({
+    theme,
+    color,
+    $variant,
+    $borderRadius,
+    $padding,
+    fontSize,
+    weigth,
+  }) => css`
     display: flex;
-    background: ${chipVariants[variant]};
-    color: ${color};
-    border-radius: ${borderRadius};
-    padding: 0.5rem;
+    background: ${theme.colors.brand[$variant]};
+    color: ${theme.colors.base[color]};
+    border-radius: ${$borderRadius};
+    padding: ${$padding};
+    font-size: ${theme.fontSizes[fontSize]};
+    font-weight: ${weigth};
+
     width: fit-content;
   `}
 `

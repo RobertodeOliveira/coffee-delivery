@@ -1,28 +1,37 @@
 import * as S from './styles'
+import { defaultTheme } from '../../styles/themes/default'
 
-export type ChipVariants =
-  | 'primary'
-  | 'secondary'
-  | 'secondary_dark'
-  | 'secondary_ligth'
-  | 'terciary'
-  | 'quaternary'
+export type ChipVariants = keyof typeof defaultTheme.colors.brand
 
 interface ChipProps {
-  color?: string
+  padding?: string
   borderRadius?: string
+  weigth?: number
+  variant?: ChipVariants
   children: React.ReactNode
-  variant: ChipVariants
+  color?: S.Colors
+  fontSize?: S.FontSizes
 }
 
 export const Chip = ({
-  children,
-  variant = 'primary',
+  variant = 'purple',
+  padding = '0.5rem',
   borderRadius = '4px',
+  fontSize = 'xs',
+  color = 'white',
+  children,
+  weigth,
 }: ChipProps) => {
   return (
     <>
-      <S.Container borderRadius={borderRadius} variant={variant}>
+      <S.Container
+        $borderRadius={borderRadius}
+        $variant={variant}
+        $padding={padding}
+        color={color}
+        fontSize={fontSize}
+        weigth={weigth}
+      >
         {children}
       </S.Container>
     </>

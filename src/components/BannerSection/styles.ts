@@ -2,35 +2,37 @@
 import styled, { css } from 'styled-components'
 
 const Container = styled.div`
-  height: 544px;
+  /* height: 544px; */
   padding: 94px 0;
 `
 
 const Wrapper = styled.div`
   display: flex;
+  /* flex-wrap: wrap; */
 `
 
 const Content = styled.div`
-  display: flex;
+  /* display: flex;
   flex-direction: column;
+
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 28px;
+  padding: 28px; */
 `
 
 const Title = styled.h1`
   ${({ theme }) => css`
     font-family: ${theme.font.title};
-    font-size: ${theme['font-size'].xg};
+    font-size: ${theme.fontSizes.xg};
     line-height: 130%;
     padding-bottom: 1rem;
   `}
 `
 
-const Image = styled.img``
-
-// // eslint-disable-next-line prettier/prettier
-// interface TextProps extends HTMLProps<HTMLParagraphElement> { }
+const Image = styled.img`
+  /* max-width: 476px; */
+`
 
 interface TextProps {
   fontSize?: string
@@ -44,7 +46,7 @@ const Text = styled.p<TextProps>`
 
 const Instrutions = styled.div`
   display: flex;
-  /* flex-direction: column; */
+  width: 100%;
 
   gap: 2rem;
   padding-top: 66px;
@@ -59,6 +61,8 @@ const ContentInstructions = styled.div`
 const WrapperInstrutions = styled.div`
   display: flex;
   flex-direction: column;
+
+  height: 100px;
   flex-wrap: wrap;
   gap: 1rem;
 `
