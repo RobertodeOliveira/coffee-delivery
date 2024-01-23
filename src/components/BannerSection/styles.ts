@@ -1,9 +1,13 @@
+// import b from '../../assets/Background.svg'
 // import { HTMLProps } from 'react'
 import styled, { css } from 'styled-components'
 
 const Container = styled.div`
   /* height: 544px; */
   padding: 94px 0;
+  background-image: url('../../assets/Background.svg');
+  /* background-repeat: repeat; */
+  background-size: cover;
 `
 
 const Wrapper = styled.div`
@@ -44,7 +48,7 @@ const Text = styled.p<TextProps>`
   `}
 `
 
-const Instrutions = styled.div`
+const Highlights = styled.div`
   display: flex;
   width: 100%;
 
@@ -52,13 +56,13 @@ const Instrutions = styled.div`
   padding-top: 66px;
 `
 
-const ContentInstructions = styled.div`
+const ContentHighlights = styled.div`
   display: flex;
   align-items: center;
   gap: 0.75rem;
 `
 
-const WrapperInstrutions = styled.div`
+const WrapperHighlights = styled.div`
   display: flex;
   flex-direction: column;
 
@@ -74,7 +78,7 @@ export {
   Title,
   Image,
   Text,
-  Instrutions,
-  ContentInstructions,
-  WrapperInstrutions,
+  Highlights,
+  ContentHighlights,
+  WrapperHighlights,
 }

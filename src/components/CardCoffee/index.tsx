@@ -6,9 +6,9 @@ import { cardsCoffeeList } from '../../mocks/cardCoffee'
 export const CardCoffee = () => {
   return (
     <S.Container>
-      {cardsCoffeeList.map(({ image, textChip, text, title, value }) => {
+      {cardsCoffeeList.map(({ image, textChip, text, title, value }, index) => {
         return (
-          <S.Wrapper key={text}>
+          <S.Wrapper key={index}>
             {image}
             <S.WrapperChip>
               {textChip.map((item, index) => {

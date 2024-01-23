@@ -53,19 +53,18 @@ export const BannerSection = () => {
             Com o Coffee Delivery você recebe seu café onde estiver, a qualquer
             hora
           </S.Text>
-          {/* Highlights */}
-          <S.Instrutions>
-            <S.WrapperInstrutions>
+          <S.Highlights>
+            <S.WrapperHighlights>
               {contentCard.map((item) => {
                 return (
-                  <S.ContentInstructions key={item.text}>
+                  <S.ContentHighlights key={item.text}>
                     {item.icon}
                     <S.Text>{item.text}</S.Text>
-                  </S.ContentInstructions>
+                  </S.ContentHighlights>
                 )
               })}
-            </S.WrapperInstrutions>
-          </S.Instrutions>
+            </S.WrapperHighlights>
+          </S.Highlights>
         </S.Content>
         <S.Image src={coffee} />
       </S.Wrapper>
