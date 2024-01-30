@@ -28,6 +28,7 @@ export const defaultTheme = {
     xxl: '32px',
     xl: '24px',
     lg: '20px',
+    xmd: '18px',
     md: '16px',
     sm: '14px',
     xs: '12px',
@@ -36,5 +37,9 @@ export const defaultTheme = {
   font: {
     regular: 'Roboto',
     title: "'Baloo 2'",
+  },
+  radius: {
+    sm: '4px',
+    md: '6px',
   },
 } as const

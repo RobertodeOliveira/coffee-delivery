@@ -7,9 +7,7 @@ export const Pages = () => {
     <>
       <S.Container>
         <Header />
-        {/* <S.Content> */}
         <Outlet />
-        {/* </S.Content> */}
       </S.Container>
     </>
   )
