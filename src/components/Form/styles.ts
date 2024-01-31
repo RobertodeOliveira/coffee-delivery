@@ -23,6 +23,12 @@ const InfoForm = styled.div`
   gap: 0.5rem;
 `
 
-const Input = styled.input``
+const ContentForm = styled.div`
+  display: flex;
+  flex-direction: column;
 
-export { Container, Title, Input, InfoForm }
+  margin-top: 2rem;
+  gap: 1rem;
+`
+
+export { Container, Title, ContentForm, InfoForm }
