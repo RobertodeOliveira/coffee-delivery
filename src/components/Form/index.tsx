@@ -6,7 +6,6 @@ import { Input } from './Input'
 export const RegisterForm = () => {
   return (
     <>
-      <S.Title>Formulário de cadastro</S.Title>
       <S.Container>
         <S.InfoForm>
           <MapPinLine size={22} weight="fill" color="#C47F17" />
@@ -18,22 +17,19 @@ export const RegisterForm = () => {
           </div>
         </S.InfoForm>
         <S.ContentForm>
-          <div style={{ width: '200px' }}>
-            <Input placeholder="CEP" />
-          </div>
+          <Input placeholder="CEP" width="35%" />
+          {/* <div style={{ display: 'flex' }}> */}
+          <Input placeholder="Rua" width="100%" />
+          {/* </div> */}
 
-          <div>
-            <Input placeholder="Rua" width="536px" />
+          <div style={{ display: 'flex', gap: '0.75rem' }}>
+            <Input placeholder="Número" width="35%" />
+            <Input placeholder="Complemento" width="65%" />
           </div>
-
-          <div style={{ display: 'flex', gap: '12px', width: '560px' }}>
-            <Input placeholder="Número" width="176px" />
-            <Input placeholder="Complemento" width="348px" />
-          </div>
-          <div style={{ display: 'flex', gap: '12px', width: '560px' }}>
-            <Input placeholder="Bairro" width="176px" />
-            <Input placeholder="Cidade" width="276px" />
-            <Input placeholder="UF" width="60px" />
+          <div style={{ display: 'flex', gap: '0.75rem' }}>
+            <Input placeholder="Bairro" width="36%" />
+            <Input placeholder="Cidade" width="45% " />
+            <Input placeholder="UF" width="20%" />
           </div>
         </S.ContentForm>
       </S.Container>

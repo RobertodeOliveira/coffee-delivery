@@ -4,8 +4,6 @@ interface InputProps {
   $width?: string
 }
 
-const Container = styled.div``
-
 const Input = styled.input<InputProps>`
   ${({ theme, $width }) => css`
     padding: 0.75rem;
@@ -14,7 +12,8 @@ const Input = styled.input<InputProps>`
     background: ${theme.colors.base.input};
 
     width: ${$width};
+    /* flex: 1; */
   `}
 `
 
-export { Container, Input }
+export { Input }

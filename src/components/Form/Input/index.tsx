@@ -8,9 +8,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 export const Input = ({ width, ...props }: InputProps) => {
   return (
     <>
-      <S.Container>
-        <S.Input $width={width} {...props} />
-      </S.Container>
+      <S.Input $width={width} {...props} />
     </>
   )
 }

@@ -11,17 +11,8 @@ const Container = styled.div`
   `}
 `
 
-const InfoForm = styled.div`
-  display: flex;
-  gap: 0.5rem;
-`
+const Title = styled.p``
 
-const ContentForm = styled.div`
-  display: flex;
-  flex-direction: column;
+const Text = styled.p``
 
-  margin-top: 2rem;
-  gap: 1rem;
-`
-
-export { Container, ContentForm, InfoForm }
+export { Container, Title, Text }
