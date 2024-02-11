@@ -12,7 +12,11 @@ const Input = styled.input<InputProps>`
     background: ${theme.colors.base.input};
 
     width: ${$width};
-    /* flex: 1; */
+
+    &:focus {
+      border-color: ${theme.colors.brand.yellow};
+      outline: none;
+    }
   `}
 `
 

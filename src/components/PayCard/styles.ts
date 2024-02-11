@@ -8,11 +8,34 @@ const Container = styled.div`
     border-radius: ${theme.radius.md};
 
     max-width: 640px;
+    margin-bottom: 2rem;
+  `}
+`
+const Content = styled.div``
+
+const Wrapper = styled.div`
+  display: flex;
+  gap: 8px;
+`
+
+const Title = styled.p`
+  ${({ theme }) => css`
+    font-size: ${theme.fontSizes.md};
+    color: ${theme.colors.base.subtitle};
   `}
 `
 
-const Title = styled.p``
+const Text = styled.p`
+  ${({ theme }) => css`
+    color: ${theme.colors.base.text};
+    font-size: ${theme.fontSizes.sm};
+  `}
+`
 
-const Text = styled.p``
+const WrapperContent = styled.div`
+  margin-top: 2rem;
+  display: flex;
+  gap: 8px;
+`
 
-export { Container, Title, Text }
+export { Container, Content, Wrapper, Title, Text, WrapperContent }

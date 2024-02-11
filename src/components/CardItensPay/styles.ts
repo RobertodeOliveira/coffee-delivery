@@ -5,24 +5,16 @@ const Container = styled.div`
     padding: 40px;
     margin-top: 1rem;
     background: ${theme.colors.base.card};
-    border-radius: ${theme.radius.md};
+    border-radius: 6px 44px 6px 44px;
 
-    max-width: 640px;
+    word-break: break-all;
+    max-width: 448px;
+    margin-bottom: 2rem;
   `}
 `
 
-const InfoForm = styled.div`
-  display: flex;
-  gap: 0.5rem;
-`
+const Wrapper = styled.div``
 
-const ContentForm = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  margin-top: 2rem;
-  gap: 1rem;
-`
 const Title = styled.h3`
   ${({ theme }) => css`
     font-size: ${theme.fontSizes.xmd};
@@ -30,4 +22,4 @@ const Title = styled.h3`
   `}
 `
 
-export { Container, ContentForm, InfoForm, Title }
+export { Container, Title, Wrapper }

@@ -1,15 +1,9 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 const Container = styled.div`
-  /* display: flex;
-  justify-content: space-between; */
+  display: flex;
+  justify-content: space-between;
 `
+const Wrapper = styled.div``
 
-const Title = styled.h3`
-  ${({ theme }) => css`
-    font-size: ${theme.fontSizes.xmd};
-    font-weight: 600;
-  `}
-`
-
-export { Container, Title }
+export { Container, Wrapper }

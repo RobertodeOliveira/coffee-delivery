@@ -34,7 +34,7 @@ export const defaultTheme = {
     xs: '12px',
     xxs: '10px',
   } as const,
-  font: {
+  fontFamily: {
     regular: 'Roboto',
     title: "'Baloo 2'",
   },

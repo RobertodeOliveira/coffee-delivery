@@ -1,7 +1,7 @@
 import { createGlobalStyle, css } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
-  *{ 
+  * { 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -15,7 +15,8 @@ export const GlobalStyle = createGlobalStyle`
   body{
     ${({ theme }) => css`
       background: white;
-      font-family: ${theme.font.regular};
+      font-family: ${theme.fontFamily.regular};
+      color: ${theme.colors.base.text};
     `}
   }
 `

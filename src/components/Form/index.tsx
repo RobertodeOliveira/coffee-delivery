@@ -6,6 +6,7 @@ import { Input } from './Input'
 export const RegisterForm = () => {
   return (
     <>
+      <S.Title>Complete seu pedido</S.Title>
       <S.Container>
         <S.InfoForm>
           <MapPinLine size={22} weight="fill" color="#C47F17" />
@@ -18,9 +19,7 @@ export const RegisterForm = () => {
         </S.InfoForm>
         <S.ContentForm>
           <Input placeholder="CEP" width="35%" />
-          {/* <div style={{ display: 'flex' }}> */}
           <Input placeholder="Rua" width="100%" />
-          {/* </div> */}
 
           <div style={{ display: 'flex', gap: '0.75rem' }}>
             <Input placeholder="Número" width="35%" />

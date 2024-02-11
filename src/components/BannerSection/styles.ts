@@ -27,7 +27,7 @@ const Content = styled.div`
 
 const Title = styled.h1`
   ${({ theme }) => css`
-    font-family: ${theme.font.title};
+    font-family: ${theme.fontFamily.title};
     font-size: ${theme.fontSizes.xg};
     line-height: 130%;
     padding-bottom: 1rem;

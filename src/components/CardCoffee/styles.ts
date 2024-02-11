@@ -32,7 +32,7 @@ const Image = styled.img`
 const Title = styled.h2`
   ${({ theme }) => css`
     font-size: ${theme.fontSizes.lg};
-    font-family: ${theme.font.title};
+    font-family: ${theme.fontFamily.title};
     margin-top: 1rem;
   `}
 `
@@ -48,7 +48,7 @@ const Text = styled.p`
 
 const Value = styled.span`
   ${({ theme }) => css`
-    font-family: ${theme.font.title};
+    font-family: ${theme.fontFamily.title};
   `}
 `
 
