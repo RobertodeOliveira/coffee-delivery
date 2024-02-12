@@ -1,4 +1,7 @@
+import { FormHTMLAttributes } from 'react'
 import styled, { css } from 'styled-components'
+
+interface FormProps extends FormHTMLAttributes<HTMLFormElement> {}
 
 const Container = styled.div`
   ${({ theme }) => css`
@@ -11,12 +14,12 @@ const Container = styled.div`
   `}
 `
 
-const InfoForm = styled.div`
+const InfoForm = styled.div<FormProps>`
   display: flex;
   gap: 0.5rem;
 `
 
-const ContentForm = styled.div`
+const Form = styled.form`
   display: flex;
   flex-direction: column;
 
@@ -30,4 +33,4 @@ const Title = styled.h3`
   `}
 `
 
-export { Container, ContentForm, InfoForm, Title }
+export { Container, Form, InfoForm, Title }

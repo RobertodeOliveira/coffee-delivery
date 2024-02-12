@@ -15,6 +15,8 @@ const Container = styled.div`
 
 const Wrapper = styled.div``
 
+const Content = styled.div``
+
 const Title = styled.h3`
   ${({ theme }) => css`
     font-size: ${theme.fontSizes.xmd};
@@ -22,4 +24,18 @@ const Title = styled.h3`
   `}
 `
 
-export { Container, Title, Wrapper }
+const Button = styled.button`
+  ${({ theme }) => css`
+    background: ${theme.colors.brand.yellow};
+    border-radius: ${theme.radius.md};
+    border: none;
+    color: ${theme.colors.base.white};
+    padding: 12px 0;
+    font-weight: 700;
+
+    cursor: pointer;
+    width: 100%;
+  `}
+`
+
+export { Container, Title, Wrapper, Content, Button }
