@@ -13,9 +13,9 @@ export const Header = () => {
 
   return (
     <S.Container>
-      <S.ButttonLogo onClick={() => redirect('/')}>
+      <S.ButtonLogo onClick={() => redirect('/')}>
         <img src={Logo} alt="" />
-      </S.ButttonLogo>
+      </S.ButtonLogo>
       <S.Content>
         <Button background="#EBE5F9" size="14px">
           <MapPin size={22} color="#8047F8" weight="fill" />

@@ -1,18 +1,19 @@
-// import { handleRegisterStreet } from '../Form'
+import { SelectedCoffee } from './components/CoffeeSelect'
 import * as S from './styles'
+import Leite from '../../../../assets/com-leite.svg'
 
 export const CardItensPay = () => {
   return (
     <>
-      <S.Wrapper>
+      <S.Container>
         <S.Title>Cafés selecionados</S.Title>
-        <S.Container>
-          Teste card
+        <S.Wrapper>
+          <SelectedCoffee srcImg={Leite} title="Expresso" price="9.90" />
           <S.Content>
             <S.Button type="submit">Confirmar pedido</S.Button>
           </S.Content>
-        </S.Container>
-      </S.Wrapper>
+        </S.Wrapper>
+      </S.Container>
     </>
   )
 }

@@ -2,9 +2,12 @@ import { createGlobalStyle, css } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
   * { 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    ${({ theme }) => css`
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      color: ${theme.colors.base.text};
+    `}
   }
 
   #root {
@@ -16,7 +19,6 @@ export const GlobalStyle = createGlobalStyle`
     ${({ theme }) => css`
       background: white;
       font-family: ${theme.fontFamily.regular};
-      color: ${theme.colors.base.text};
     `}
   }
 `

@@ -1,7 +1,7 @@
 import * as S from './styles'
 
 interface TextProps {
-  children: string
+  children?: string
   $fontSize?: string
   $color?: string
   fontWeigth?: number
@@ -15,11 +15,9 @@ export const Text = ({
 }: TextProps) => {
   return (
     <>
-      <S.Container>
-        <S.Text color={$color} fontSize={$fontSize} fontWeigth={fontWeigth}>
-          {children}
-        </S.Text>
-      </S.Container>
+      <S.Text color={$color} fontSize={$fontSize} fontWeigth={fontWeigth}>
+        {children}
+      </S.Text>
     </>
   )
 }

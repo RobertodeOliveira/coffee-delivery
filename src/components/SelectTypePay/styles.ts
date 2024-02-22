@@ -14,6 +14,8 @@ const Container = styled.button`
 
     &:hover {
       background: ${theme.colors.base.hover};
+      transition: 0.2seg;
+      cursor: pointer;
     }
 
     &:focus {

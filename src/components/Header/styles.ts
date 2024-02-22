@@ -5,11 +5,10 @@ const Container = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  /* width: 1120px; */
   padding: 2rem 0;
 `
 
-const ButttonLogo = styled.button`
+const ButtonLogo = styled.button`
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -20,4 +19,4 @@ const Content = styled.div`
   gap: 0.375rem;
 `
 
-export { Container, Content, ButttonLogo }
+export { Container, Content, ButtonLogo }

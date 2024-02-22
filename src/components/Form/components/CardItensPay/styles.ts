@@ -1,6 +1,12 @@
 import styled, { css } from 'styled-components'
 
 const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+`
+
+const Wrapper = styled.div`
   ${({ theme }) => css`
     padding: 40px;
     margin-top: 1rem;
@@ -10,13 +16,6 @@ const Container = styled.div`
     word-break: break-all;
     margin-bottom: 2rem;
   `}
-`
-
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 400px;
-  /* background: red; */
 `
 
 const Content = styled.div``
@@ -39,6 +38,11 @@ const Button = styled.button`
 
     cursor: pointer;
     width: 100%;
+
+    &:hover {
+      background: ${theme.colors.brand.yellowDark};
+      transition: 0.2s;
+    }
   `}
 `
 

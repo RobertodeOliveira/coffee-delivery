@@ -8,6 +8,7 @@ const ContainerButton = styled.div`
     padding: 8px;
     background: ${theme.colors.base.button};
     border-radius: ${theme.radius.md};
+    width: fit-content;
   `}
 `
 
@@ -20,6 +21,12 @@ const BaseButtonStyles = styled.button`
     border: none;
     background: ${theme.colors.base.button};
     cursor: pointer;
+
+    svg {
+      &:hover {
+        color: #4b2995;
+      }
+    }
   `}
 `
 
