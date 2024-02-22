@@ -2,6 +2,10 @@ import * as S from './styles'
 import '../../assets/Coffee.svg'
 import { Chip } from '../Chip'
 import { cardsCoffeeList } from '../../mocks/cardCoffee'
+import { Count } from '../Count'
+import { Button } from '../Button'
+import { ShoppingCart } from 'phosphor-react'
+import { Text } from '../Text'
 
 export const CardCoffee = () => {
   return (
@@ -28,7 +32,16 @@ export const CardCoffee = () => {
             </S.WrapperChip>
             <S.Title>{title}</S.Title>
             <S.Text>{text}</S.Text>
-            <S.Value>R$ {value}</S.Value>
+            <S.WrapperBuy>
+              <S.WrapperPrice>
+                <Text $fontSize="11px">R$</Text>
+                <S.Value>{value}</S.Value>
+              </S.WrapperPrice>
+              <Count />
+              <Button background="#4B2995">
+                <ShoppingCart size={22} color="white" weight="fill" />
+              </Button>
+            </S.WrapperBuy>
           </S.Wrapper>
         )
       })}

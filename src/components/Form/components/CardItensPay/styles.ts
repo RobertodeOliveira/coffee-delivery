@@ -8,12 +8,16 @@ const Container = styled.div`
     border-radius: 6px 44px 6px 44px;
 
     word-break: break-all;
-    max-width: 448px;
     margin-bottom: 2rem;
   `}
 `
 
-const Wrapper = styled.div``
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  /* background: red; */
+`
 
 const Content = styled.div``
 

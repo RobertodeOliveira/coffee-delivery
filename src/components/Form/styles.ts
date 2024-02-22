@@ -1,9 +1,17 @@
-import { FormHTMLAttributes } from 'react'
 import styled, { css } from 'styled-components'
 
-interface FormProps extends FormHTMLAttributes<HTMLFormElement> {}
+const ContainerForm = styled.form`
+  display: flex;
+  flex-wrap: wrap;
 
-const Container = styled.div`
+  gap: 2rem;
+`
+const Wrapper = styled.div`
+  /* background: red; */
+  /* width: 50%; */
+`
+
+const BaseContainer = styled.div`
   ${({ theme }) => css`
     padding: 40px;
     margin-top: 1rem;
@@ -14,18 +22,6 @@ const Container = styled.div`
   `}
 `
 
-const InfoForm = styled.div<FormProps>`
-  display: flex;
-  gap: 0.5rem;
-`
-
-const Form = styled.form`
-  display: flex;
-  flex-direction: column;
-
-  margin-top: 2rem;
-  gap: 1rem;
-`
 const Title = styled.h3`
   ${({ theme }) => css`
     font-size: ${theme.fontSizes.xmd};
@@ -33,4 +29,4 @@ const Title = styled.h3`
   `}
 `
 
-export { Container, Form, InfoForm, Title }
+export { BaseContainer, Title, ContainerForm, Wrapper }

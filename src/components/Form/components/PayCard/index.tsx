@@ -1,22 +1,17 @@
 import { Bank, CreditCard, CurrencyDollar, Money } from 'phosphor-react'
 import * as S from './styles'
-import { SelectTypePay } from '../SelectTypePay'
+import { SelectTypePay } from '../../../SelectTypePay'
+import { Headertitle } from '../HeaderTitle'
 
 export const PayCard = () => {
   return (
     <>
       <S.Container>
-        <S.Title>Formulário de cadastro</S.Title>
-        <S.Wrapper>
-          <CurrencyDollar size={22} weight="fill" color="#8047F8" />
-          <div>
-            <S.Title>Pagamento</S.Title>
-            <S.Text>
-              O pagamento é feito na entrega. Escolha a forma que deseja pagar
-            </S.Text>
-          </div>
-        </S.Wrapper>
-
+        <Headertitle
+          icon={<CurrencyDollar size={22} weight="fill" color="#8047F8" />}
+          title="Pagamento"
+          subTitle=" O pagamento é feito na entrega. Escolha a forma que deseja pagar"
+        />
         <S.WrapperContent>
           <SelectTypePay
             icon={<CreditCard size={14} color="#8047F8" />}

@@ -2,7 +2,6 @@ import styled, { css } from 'styled-components'
 
 const Container = styled.div`
   display: flex;
-  /* justify-content: space-between; */
   flex-wrap: wrap;
 
   gap: 1rem;
@@ -49,6 +48,10 @@ const Text = styled.p`
 const Value = styled.span`
   ${({ theme }) => css`
     font-family: ${theme.fontFamily.title};
+    font-size: ${theme.fontSizes.md};
+
+    display: flex;
+    align-items: center;
   `}
 `
 
@@ -57,4 +60,29 @@ const WrapperChip = styled.div`
   gap: 0.25rem;
 `
 
-export { Container, Wrapper, Image, Title, Text, WrapperChip, Value }
+const WrapperBuy = styled.div`
+  display: flex;
+
+  gap: 0.5rem;
+  margin-top: 2rem;
+`
+
+const WrapperPrice = styled.div`
+  display: flex;
+  align-items: center;
+
+  gap: 4px;
+  margin-right: 1.4rem;
+`
+
+export {
+  Container,
+  Wrapper,
+  Image,
+  Title,
+  Text,
+  WrapperChip,
+  Value,
+  WrapperBuy,
+  WrapperPrice,
+}
