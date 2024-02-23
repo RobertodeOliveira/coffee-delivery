@@ -1,36 +1,28 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 const Container = styled.div`
-  /* padding: 40px;
-  border: 1px solid transparent;
-  background-clip: padding-box;
-
-  border-image: linear-gradient(to right, #dbac2c, #8047f8);
-  border-image-slice: 1;
-  border-radius: 6px 36px 6px 36px; */
-
-  position: relative;
-  width: 200px;
-  height: 200px;
-
-  &:before,
-  &:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: -1;
-    border: 1px solid transparent;
-    background-clip: padding-box;
+  ${({ theme }) => css`
+    padding: 2.5rem;
     border-radius: 6px 36px 6px 36px;
-  }
+    background: ${theme.colors.base.background};
+    min-width: 32rem;
+    position: relative;
 
-  &:before {
-    border-image: linear-gradient(to right, #dbac2c, #8047f8);
-    border-image-slice: 1;
-  }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      z-index: -1;
+      border-radius: 7px 37px 7px 37px;
+      background: linear-gradient(102.89deg, #dbac2c 2.61%, #8047f8 98.76%);
+    }
+  `}
 `
 
 export { Container }

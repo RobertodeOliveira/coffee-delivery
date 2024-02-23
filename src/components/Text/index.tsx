@@ -1,7 +1,8 @@
+import { ReactNode } from 'react'
 import * as S from './styles'
 
 interface TextProps {
-  children?: string
+  children?: ReactNode
   $fontSize?: string
   $color?: string
   fontWeigth?: number

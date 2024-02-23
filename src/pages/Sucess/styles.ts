@@ -6,6 +6,11 @@ const WrapperText = styled.div`
   margin-bottom: 40px;
 `
 
+const SectionSucess = styled.div`
+  display: flex;
+  justify-content: space-between;
+`
+
 const Title = styled.p`
   ${({ theme }) => css`
     font-size: ${theme.fontSizes.xxl};
@@ -20,4 +25,4 @@ const Text = styled.p`
   `}
 `
 
-export { Container, WrapperText, Title, Text }
+export { Container, WrapperText, Title, Text, SectionSucess }
