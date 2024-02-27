@@ -1,28 +1,21 @@
 import { Minus, Plus } from 'phosphor-react'
 import * as S from './styles'
-import { useState } from 'react'
 
-export const Count = () => {
-  const [count, setCount] = useState(0)
+type CountProps = {
+  handlePlus: () => void
+  handleLess: () => void
+  count: number
+}
 
-  const handlePlusCoffee = () => {
-    setCount(count + 1)
-  }
-
-  const handleLessCoffee = () => {
-    if (count > 0) {
-      setCount(count - 1)
-    }
-  }
-
+export const Count = ({ handlePlus, handleLess, count }: CountProps) => {
   return (
     <>
       <S.ContainerButton>
-        <S.LessButton onClick={handleLessCoffee}>
+        <S.LessButton onClick={handleLess}>
           <Minus size={12} color="#8047F8" weight="bold" />
         </S.LessButton>
         <S.CountNumber>{count}</S.CountNumber>
-        <S.PlusButton onClick={handlePlusCoffee}>
+        <S.PlusButton onClick={handlePlus}>
           <Plus size={12} color="#8047F8" weight="bold" />
         </S.PlusButton>
       </S.ContainerButton>

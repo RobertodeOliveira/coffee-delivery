@@ -17,6 +17,7 @@ import { ReactNode } from 'react'
 import { Image } from '../components/CardCoffee/styles'
 
 export type CardCoffeeList = {
+  id: number
   image: ReactNode
   textChip: string[]
   title: string
@@ -26,6 +27,7 @@ export type CardCoffeeList = {
 
 export const cardsCoffeeList: CardCoffeeList[] = [
   {
+    id: 1,
     image: <Image src={coffee} alt="" />,
     textChip: ['TRADICIONAL'],
     title: 'Expresso Tradicional',
@@ -33,6 +35,7 @@ export const cardsCoffeeList: CardCoffeeList[] = [
     value: '9,90',
   },
   {
+    id: 2,
     image: <Image src={american} alt="" />,
     textChip: ['TRADICIONAL'],
     title: 'Expresso Americano',
@@ -40,6 +43,7 @@ export const cardsCoffeeList: CardCoffeeList[] = [
     value: '9,90',
   },
   {
+    id: 3,
     image: <Image src={creamy} alt="" />,
     textChip: ['TRADICIONAL'],
     title: 'Expresso Cremoso',
@@ -47,6 +51,7 @@ export const cardsCoffeeList: CardCoffeeList[] = [
     value: '9,90',
   },
   {
+    id: 4,
     image: <Image src={ice} alt="" />,
     textChip: ['TRADICIONAL', 'GELADO'],
     title: 'Expresso Gelado',
@@ -54,6 +59,7 @@ export const cardsCoffeeList: CardCoffeeList[] = [
     value: '9,90',
   },
   {
+    id: 5,
     image: <Image src={milk} alt="" />,
     textChip: ['TRADICIONAL', 'COM LEITE'],
     title: 'Café com Leite',
@@ -61,6 +67,7 @@ export const cardsCoffeeList: CardCoffeeList[] = [
     value: '9,90',
   },
   {
+    id: 6,
     image: <Image src={latte} alt="" />,
     textChip: ['TRADICIONAL', 'COM LEITE'],
     title: 'Latte',
@@ -68,6 +75,7 @@ export const cardsCoffeeList: CardCoffeeList[] = [
     value: '9,90',
   },
   {
+    id: 7,
     image: <Image src={capuccino} alt="" />,
     textChip: ['TRADICIONAL', 'COM LEITE'],
     title: 'Capuccino',
@@ -75,6 +83,7 @@ export const cardsCoffeeList: CardCoffeeList[] = [
     value: '9,90',
   },
   {
+    id: 8,
     image: <Image src={macchiato} alt="" />,
     textChip: ['TRADICIONAL', 'COM LEITE'],
     title: 'Macchiato',
@@ -82,6 +91,7 @@ export const cardsCoffeeList: CardCoffeeList[] = [
     value: '9,90',
   },
   {
+    id: 9,
     image: <Image src={mocaccino} alt="" />,
     textChip: ['TRADICIONAL', 'COM LEITE'],
     title: 'Mocaccino',
@@ -89,6 +99,7 @@ export const cardsCoffeeList: CardCoffeeList[] = [
     value: '9,90',
   },
   {
+    id: 10,
     image: <Image src={hotChocolate} alt="" />,
     textChip: ['ESPECIAL', 'COM LEITE'],
     title: 'Chocolate Quente',
@@ -96,6 +107,7 @@ export const cardsCoffeeList: CardCoffeeList[] = [
     value: '9,90',
   },
   {
+    id: 11,
     image: <Image src={cubano} alt="" />,
     textChip: ['ESPECIAL', 'ALCOÓLICO', 'GELADO'],
     title: 'Cubano',
@@ -103,6 +115,7 @@ export const cardsCoffeeList: CardCoffeeList[] = [
     value: '9,90',
   },
   {
+    id: 12,
     image: <Image src={cubano} alt="" />,
     textChip: ['ESPECIAL', 'ALCOÓLICO', 'GELADO'],
     title: 'Cubano',
@@ -110,6 +123,7 @@ export const cardsCoffeeList: CardCoffeeList[] = [
     value: '9,90',
   },
   {
+    id: 13,
     image: <Image src={havaiano} alt="" />,
     textChip: ['ESPECIAL'],
     title: 'Havaiano',
@@ -117,6 +131,7 @@ export const cardsCoffeeList: CardCoffeeList[] = [
     value: '9,90',
   },
   {
+    id: 14,
     image: <Image src={arabe} alt="" />,
     textChip: ['ESPECIAL'],
     title: 'Árabe',
@@ -124,6 +139,7 @@ export const cardsCoffeeList: CardCoffeeList[] = [
     value: '9,90',
   },
   {
+    id: 15,
     image: <Image src={irlandes} alt="" />,
     textChip: ['ESPECIAL', 'ALCOÒLICO'],
     title: 'Irlandês',
