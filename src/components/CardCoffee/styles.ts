@@ -75,6 +75,22 @@ const WrapperPrice = styled.div`
   margin-right: 1.4rem;
 `
 
+const ButtonCart = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    align-items: center;
+    background: ${theme.colors.brand.purpleDark};
+    border-radius: ${theme.radius.md};
+    padding: 0.5rem;
+    position: relative;
+
+    &:hover {
+      cursor: pointer;
+      background: ${theme.colors.brand.purple};
+    }
+  `}
+`
+
 export {
   Container,
   Wrapper,
@@ -85,4 +101,5 @@ export {
   Value,
   WrapperBuy,
   WrapperPrice,
+  ButtonCart,
 }

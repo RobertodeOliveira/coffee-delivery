@@ -3,9 +3,12 @@ import Logo from '../../assets/Logo.svg'
 import { Button } from '../Button'
 import { MapPin, ShoppingCart } from 'phosphor-react'
 import { useNavigate } from 'react-router-dom'
+import { useContext } from 'react'
+import { CartContext } from '../../contexts'
 
 export const Header = () => {
   const navigate = useNavigate()
+  const { itemsQuantity } = useContext(CartContext)
 
   const redirect = (router: string) => {
     navigate(`${router}`)
@@ -21,9 +24,10 @@ export const Header = () => {
           <MapPin size={22} color="#8047F8" weight="fill" />
           Rio de Janeiro, RJ
         </Button>
-        <Button background="#F1E9C9" onClick={() => redirect('/checkout')}>
+        <S.ButtonCart onClick={() => redirect('/checkout')}>
           <ShoppingCart size={22} color="#C47F17" weight="fill" />
-        </Button>
+          <span>{itemsQuantity}</span>
+        </S.ButtonCart>
       </S.Content>
     </S.Container>
   )

@@ -3,33 +3,29 @@ import { Button } from '../../../../../Button'
 import { Count } from '../../../../../Count'
 import { Text } from '../../../../../Text'
 import * as S from './styles'
+import { CartItem } from '../../../../../../contexts'
+import { formatMoney } from './../../../../../../utils/formatMoney'
 
 type SelectedCoffeeProps = {
-  srcImg?: string
-  title?: string
-  price?: string
+  coffee: CartItem
 }
 
-export const SelectedCoffee = ({
-  srcImg,
-  title,
-  price,
-}: SelectedCoffeeProps) => {
+export const SelectedCoffee = ({ coffee }: SelectedCoffeeProps) => {
   return (
     <>
       <S.Container>
-        <S.Img src={srcImg} />
+        <S.Img src={coffee.image} />
         <S.Wrapper>
-          <Text>{title}</Text>
+          <Text>{coffee.title}</Text>
           <S.WrapperButton>
-            <Count />
+            <Count quantity={coffee.quantity} />
             <Button background="#E6E5E5" size="12px">
               <Trash size={14} color="#8047F8" /> REMOVER
             </Button>
           </S.WrapperButton>
         </S.Wrapper>
         <Text fontWeigth={700} $fontSize="16px">
-          {price}
+          R${formatMoney(coffee.value)}
         </Text>
       </S.Container>
     </>

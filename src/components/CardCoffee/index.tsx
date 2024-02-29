@@ -1,13 +1,13 @@
 import * as S from './styles'
 import '../../assets/Coffee.svg'
 import { Chip } from '../Chip'
-import { CardCoffeeList, cardsCoffeeList } from '../../mocks/cardCoffee'
+import { CardCoffeeList } from '../../mocks/cardCoffee'
 import { Count } from '../Count'
-import { Button } from '../Button'
 import { ShoppingCart } from 'phosphor-react'
 import { Text } from '../Text'
 import { useContext, useState } from 'react'
 import { CartContext } from '../../contexts'
+import { formatMoney } from './../../utils/formatMoney'
 
 type CardCoffee = {
   coffee: CardCoffeeList
@@ -15,69 +15,61 @@ type CardCoffee = {
 
 export const CardCoffee = ({ coffee }: CardCoffee) => {
   const { addCoffeeToCart } = useContext(CartContext)
-  const [count, setCount] = useState(0)
+  const [quantity, setQuantity] = useState(1)
 
   const handlePlus = () => {
-    setCount(count + 1)
+    setQuantity(quantity + 1)
   }
 
   const handleLess = () => {
-    if (count > 0) {
-      setCount(count - 1)
+    if (quantity > 0) {
+      setQuantity(quantity - 1)
     }
   }
 
   const handleAddToCart = () => {
     const coffeeAdd = {
       ...coffee,
-      quantity: 1,
+      quantity,
     }
     addCoffeeToCart(coffeeAdd)
   }
 
   return (
-    <S.Container>
-      {cardsCoffeeList.map(
-        ({ image, textChip, text, title, value }: CardCoffeeList, index) => {
+    <S.Wrapper>
+      <S.Image src={coffee.image} />
+      <S.WrapperChip>
+        {coffee.textChip.map((item, index) => {
           return (
-            <S.Wrapper key={index}>
-              {image}
-              <S.WrapperChip>
-                {textChip.map((item, index) => {
-                  return (
-                    <Chip
-                      borderRadius="100px"
-                      variant="yellowLight"
-                      fontSize="xxs"
-                      color="yellowDark"
-                      weigth={700}
-                      key={index}
-                    >
-                      {item}
-                    </Chip>
-                  )
-                })}
-              </S.WrapperChip>
-              <S.Title>{title}</S.Title>
-              <S.Text>{text}</S.Text>
-              <S.WrapperBuy>
-                <S.WrapperPrice>
-                  <Text $fontSize="11px">R$</Text>
-                  <S.Value>{value}</S.Value>
-                </S.WrapperPrice>
-                <Count
-                  count={count}
-                  handlePlus={handlePlus}
-                  handleLess={handleLess}
-                />
-                <Button background="#4B2995" onClick={handleAddToCart}>
-                  <ShoppingCart size={22} color="white" weight="fill" />
-                </Button>
-              </S.WrapperBuy>
-            </S.Wrapper>
+            <Chip
+              borderRadius="100px"
+              variant="yellowLight"
+              fontSize="xxs"
+              color="yellowDark"
+              weigth={700}
+              key={index}
+            >
+              {item}
+            </Chip>
           )
-        },
-      )}
-    </S.Container>
+        })}
+      </S.WrapperChip>
+      <S.Title>{coffee.title}</S.Title>
+      <S.Text>{coffee.text}</S.Text>
+      <S.WrapperBuy>
+        <S.WrapperPrice>
+          <Text $fontSize="11px">R$</Text>
+          <S.Value>{formatMoney(coffee.value)}</S.Value>
+        </S.WrapperPrice>
+        <Count
+          quantity={quantity}
+          handlePlus={handlePlus}
+          handleLess={handleLess}
+        />
+        <S.ButtonCart onClick={handleAddToCart}>
+          <ShoppingCart size={22} color="white" weight="fill" />
+        </S.ButtonCart>
+      </S.WrapperBuy>
+    </S.Wrapper>
   )
 }

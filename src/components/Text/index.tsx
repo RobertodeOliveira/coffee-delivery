@@ -16,7 +16,7 @@ export const Text = ({
 }: TextProps) => {
   return (
     <>
-      <S.Text color={$color} fontSize={$fontSize} fontWeigth={fontWeigth}>
+      <S.Text color={$color} fontSize={$fontSize} $fontWeigth={fontWeigth}>
         {children}
       </S.Text>
     </>

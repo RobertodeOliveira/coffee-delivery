@@ -1,11 +1,11 @@
 import { BannerSection } from '../../components/BannerSection'
-import { CardCoffee } from '../../components/CardCoffee'
+import { SectionCoffees } from './SectionCoffees'
 
 export const Home = () => {
   return (
     <>
       <BannerSection />
-      <CardCoffee />
+      <SectionCoffees />
     </>
   )
 }

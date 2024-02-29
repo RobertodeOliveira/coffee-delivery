@@ -18,7 +18,10 @@ const Wrapper = styled.div`
   `}
 `
 
-const Content = styled.div``
+const Content = styled.div`
+  max-height: 500px;
+  overflow-y: auto;
+`
 
 const Title = styled.h3`
   ${({ theme }) => css`

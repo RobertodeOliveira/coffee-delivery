@@ -1,29 +1,16 @@
-// import b from '../../assets/Background.svg'
-// import { HTMLProps } from 'react'
 import styled, { css } from 'styled-components'
 
 const Container = styled.div`
-  /* height: 544px; */
   padding: 94px 0;
   background-image: url('../../assets/Background.svg');
-  /* background-repeat: repeat; */
   background-size: cover;
 `
 
 const Wrapper = styled.div`
   display: flex;
-  /* flex-wrap: wrap; */
 `
 
-const Content = styled.div`
-  /* display: flex;
-  flex-direction: column;
-
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  padding: 28px; */
-`
+const Content = styled.div``
 
 const Title = styled.h1`
   ${({ theme }) => css`
@@ -34,9 +21,7 @@ const Title = styled.h1`
   `}
 `
 
-const Image = styled.img`
-  /* max-width: 476px; */
-`
+const Image = styled.img``
 
 interface TextProps {
   fontSize?: string
