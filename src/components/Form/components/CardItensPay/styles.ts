@@ -46,6 +46,13 @@ const Button = styled.button`
       background: ${theme.colors.brand.yellowDark};
       transition: 0.2s;
     }
+
+    &:disabled {
+      ${({ theme }) => css`
+        background-color: ${theme.colors.brand.yellowLight};
+        cursor: not-allowed;
+      `}
+    }
   `}
 `
 
