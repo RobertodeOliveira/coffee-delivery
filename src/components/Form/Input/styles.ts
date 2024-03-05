@@ -4,6 +4,20 @@ interface InputProps {
   $width?: string
 }
 
+const InputWrapper = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    position: relative;
+
+    > p {
+      color: ${theme.colors.base.error};
+      font-size: ${theme.fontSizes.xs};
+    }
+  `}
+`
+
 const Input = styled.input<InputProps>`
   ${({ theme, $width }) => css`
     padding: 0.75rem;
@@ -20,4 +34,4 @@ const Input = styled.input<InputProps>`
   `}
 `
 
-export { Input }
+export { Input, InputWrapper }
