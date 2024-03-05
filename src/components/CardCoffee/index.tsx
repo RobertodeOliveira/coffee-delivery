@@ -1,19 +1,18 @@
 import * as S from './styles'
 import '../../assets/Coffee.svg'
 import { Chip } from '../Chip'
-import { CardCoffeeList } from '../../mocks/cardCoffee'
 import { Count } from '../Count'
 import { ShoppingCart } from 'phosphor-react'
 import { Text } from '../Text'
 import { useContext, useState } from 'react'
-import { CartContext } from '../../contexts'
+import { CartContext, CartItem } from '../../contexts'
 import { formatMoney } from './../../utils/formatMoney'
 
-type CardCoffee = {
-  coffee: CardCoffeeList
+type CardCoffeeProps = {
+  coffee: CartItem
 }
 
-export const CardCoffee = ({ coffee }: CardCoffee) => {
+export const CardCoffee = ({ coffee }: CardCoffeeProps) => {
   const { addCoffeeToCart } = useContext(CartContext)
   const [quantity, setQuantity] = useState(1)
 

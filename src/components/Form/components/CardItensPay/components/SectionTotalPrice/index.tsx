@@ -1,35 +1,33 @@
+import { useContext } from 'react'
 import { defaultTheme } from '../../../../../../styles/themes/default'
 import { Text } from '../../../../../Text'
 import * as S from './styles'
+import { CartContext } from '../../../../../../contexts'
+import { formatMoney } from '../../../../../../utils/formatMoney'
 
-type SectionTotalPrice = {
-  totalValueItems?: string
-  deliveryValue?: string
-  totalValue?: string
-}
+export const SectionTotalPrice = () => {
+  const deliveryPrice = 3.5
 
-export const SectionTotalPrice = ({
-  totalValueItems = '0',
-  deliveryValue = '0',
-  totalValue = '0',
-}: SectionTotalPrice) => {
+  const { valueTotalInCart, itemsQuantity } = useContext(CartContext)
+  const totalCart = deliveryPrice + valueTotalInCart
+
   return (
     <>
       <S.Container>
         <S.Wrapper>
           <Text>Total de itens</Text>
-          <Text>{totalValueItems}</Text>
+          <Text>{itemsQuantity}</Text>
         </S.Wrapper>
         <S.Wrapper>
           <Text>Entrega</Text>
-          <Text>{deliveryValue}</Text>
+          <Text>3,50</Text>
         </S.Wrapper>
         <S.Wrapper>
           <Text fontWeigth={700} $fontSize={defaultTheme.fontSizes.lg}>
             Total
           </Text>
           <Text fontWeigth={700} $fontSize={defaultTheme.fontSizes.lg}>
-            {totalValue}
+            R$ {formatMoney(totalCart)}
           </Text>
         </S.Wrapper>
       </S.Container>

@@ -2,9 +2,9 @@ import { Minus, Plus } from 'phosphor-react'
 import * as S from './styles'
 
 type CountProps = {
+  quantity?: number
   handlePlus?: () => void
   handleLess?: () => void
-  quantity?: number
 }
 
 export const Count = ({ handlePlus, handleLess, quantity }: CountProps) => {
