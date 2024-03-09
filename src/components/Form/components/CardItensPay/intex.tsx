@@ -6,11 +6,11 @@ import { CartContext } from '../../../../contexts'
 import { SectionTotalPrice } from './components/SectionTotalPrice'
 
 export const CardItensPay = () => {
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
   const { cartItem } = useContext(CartContext)
-  const redirect = (path: string) => {
-    navigate(`${path}`)
-  }
+  // const redirect = (path: string) => {
+  //   navigate(`${path}`)
+  // }
 
   return (
     <>
@@ -23,9 +23,7 @@ export const CardItensPay = () => {
             })}
           </S.Content>
           <SectionTotalPrice />
-          <S.Button onClick={() => redirect('/sucess')} type="submit">
-            Confirmar pedido
-          </S.Button>
+          <S.Button type="submit">Confirmar pedido</S.Button>
         </S.Wrapper>
       </S.Container>
     </>

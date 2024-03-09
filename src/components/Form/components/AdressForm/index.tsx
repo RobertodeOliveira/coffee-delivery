@@ -34,6 +34,7 @@ export const AdressForm = () => {
         <Input
           placeholder="Número"
           type="number"
+          min={0}
           {...register('numero')}
           error={errors.numero?.message}
         />
@@ -42,6 +43,7 @@ export const AdressForm = () => {
           placeholder="Complemento"
           {...register('complemento')}
           error={errors.complemento?.message}
+          rigthText="Opcional"
         />
         <Input
           placeholder="Bairro"
