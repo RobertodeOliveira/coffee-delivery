@@ -1,6 +1,24 @@
 import styled, { css } from 'styled-components'
 
-const Container = styled.button`
+const Container = styled.div`
+  input {
+    visibility: hidden;
+    appearance: none;
+  }
+
+  input:checked + label div {
+    ${({ theme }) => css`
+      background: ${theme.colors.brand.purpleLight};
+      border: 1px solid ${theme.colors.brand.purple};
+
+      &:hover {
+        background: ${theme.colors.brand.purpleLight};
+      }
+    `}
+  }
+`
+
+const ContentContainer = styled.div`
   ${({ theme }) => css`
     padding: 16px;
     width: 188px;
@@ -30,4 +48,4 @@ const Text = styled.p`
   `}
 `
 
-export { Container, Text }
+export { Container, Text, ContentContainer }

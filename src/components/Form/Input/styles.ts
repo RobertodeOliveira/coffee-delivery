@@ -29,7 +29,8 @@ const InputStyleContainer = styled.div<InputStyleContainerProps>`
     align-items: center;
     transition: 0.4s;
     overflow: hidden;
-    /* ${hasError} */
+    border: ${hasError ? `${theme.colors.base.error}` : ''};
+    position: relative;
 
     &:focus-within {
       border-color: ${theme.colors.brand.yellowDark};

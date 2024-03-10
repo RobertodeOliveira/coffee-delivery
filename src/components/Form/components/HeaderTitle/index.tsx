@@ -2,13 +2,13 @@ import * as S from './styles'
 import { Text } from '../../../Text'
 import { ReactNode } from 'react'
 
-type HeadertitleProps = {
+type HeaderTitleProps = {
   icon: ReactNode
   title: string
   subTitle: string
 }
 
-export const Headertitle = ({ icon, title, subTitle }: HeadertitleProps) => {
+export const HeaderTitle = ({ icon, title, subTitle }: HeaderTitleProps) => {
   return (
     <>
       <S.InfoForm>

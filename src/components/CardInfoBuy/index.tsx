@@ -2,16 +2,25 @@ import { MapPinLine } from 'phosphor-react'
 import { Highlight } from '../Highlight'
 import { Text } from '../Text'
 import * as S from './styles'
+import { OrderData } from '../Form'
 
-export const CardInfoBuy = () => {
+interface CardInfoBuy {
+  state: OrderData
+}
+
+export const CardInfoBuy = ({ state }: CardInfoBuy) => {
   return (
     <S.Container>
       <Highlight
         backgroundIcon="#8047F8"
         title={
           <Text>
-            Entrega em <strong>Rua João Daniel Martinelli, 102 </strong> <br />
-            Farrapos - Porto Alegre, RS
+            Entrega em
+            <strong>
+              {state.rua}, {state.numero}
+            </strong>
+            <br />
+            {state.bairro}-{state.cidade}, {state.uf}
           </Text>
         }
         icon={<MapPinLine size={14} color="white" weight="fill" />}
@@ -30,7 +39,7 @@ export const CardInfoBuy = () => {
         backgroundIcon="#C47F17"
         title={
           <Text>
-            Pagamento na entrega <br /> <strong> Cartão de Crédito</strong>
+            Pagamento na entrega <br /> <strong>{state.paymentMethod}</strong>
           </Text>
         }
         icon={<MapPinLine size={14} color="white" weight="fill" />}

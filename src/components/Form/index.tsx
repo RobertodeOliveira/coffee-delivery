@@ -1,12 +1,21 @@
 import { MapPinLine } from 'phosphor-react'
 import * as S from './styles'
-import { Headertitle } from './components/HeaderTitle'
+import { HeaderTitle } from './components/HeaderTitle'
 import { AdressForm } from './components/AdressForm'
 import { CardItensPay } from './components/CardItensPay/intex'
 import { PayCard } from './components/PayCard'
 import { FormProvider, useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import * as zod from 'zod'
+import { useNavigate } from 'react-router-dom'
+import { useContext } from 'react'
+import { CartContext } from '../../contexts'
+
+enum paymentMethods {
+  credit = 'credit',
+  debit = 'debit',
+  money = 'money',
+}
 
 const confirmOrderFormValidationSchema = zod.object({
   cep: zod.string().min(1, 'Informe o CEP'),
@@ -16,6 +25,11 @@ const confirmOrderFormValidationSchema = zod.object({
   cidade: zod.string().min(1, 'Informe a cidade'),
   bairro: zod.string().min(1, 'Informe o bairro'),
   uf: zod.string().min(1, 'Informe o UF'),
+  paymentMethod: zod.nativeEnum(paymentMethods, {
+    errorMap: () => {
+      return { message: 'Informe o método de pagamento' }
+    },
+  }),
 })
 
 export type OrderData = zod.infer<typeof confirmOrderFormValidationSchema>
@@ -27,10 +41,13 @@ export const RegisterForm = () => {
     resolver: zodResolver(confirmOrderFormValidationSchema),
   })
 
+  const { clearCart } = useContext(CartContext)
   const { handleSubmit } = confirmOrderForm
+  const navigate = useNavigate()
 
   const handleConfirmOrder = (data: ConfirmOrderData) => {
-    console.log(data)
+    navigate('/sucess', { state: data })
+    clearCart()
   }
 
   return (
@@ -40,7 +57,7 @@ export const RegisterForm = () => {
           <S.Wrapper>
             <S.Title>Complete seu pedido</S.Title>
             <S.BaseContainer>
-              <Headertitle
+              <HeaderTitle
                 icon={<MapPinLine size={22} color="#C47F17" />}
                 title="Endereço de entrega"
                 subTitle="Informe o endereço onde deseja receber seu pedido"

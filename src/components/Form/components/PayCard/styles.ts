@@ -9,6 +9,11 @@ const Container = styled.div`
 
     max-width: 640px;
     margin-bottom: 2rem;
+
+    > p {
+      margin-top: 6px;
+      color: ${theme.colors.base.error};
+    }
   `}
 `
 const Content = styled.div``
