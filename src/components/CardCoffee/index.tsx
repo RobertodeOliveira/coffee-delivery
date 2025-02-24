@@ -5,11 +5,12 @@ import { Count } from '../Count'
 import { ShoppingCart } from 'phosphor-react'
 import { Text } from '../Text'
 import { useContext, useState } from 'react'
-import { CartContext, CartItem } from '../../contexts'
+import { CartContext } from '../../contexts'
 import { formatMoney } from './../../utils/formatMoney'
+import { Coffee } from '../../mocks/cardCoffee'
 
 type CardCoffeeProps = {
-  coffee: CartItem
+  coffee: Coffee
 }
 
 export const CardCoffee = ({ coffee }: CardCoffeeProps) => {
@@ -45,7 +46,7 @@ export const CardCoffee = ({ coffee }: CardCoffeeProps) => {
               variant="yellowLight"
               fontSize="xxs"
               color="yellowDark"
-              weigth={700}
+              weight={700}
               key={index}
             >
               {item}

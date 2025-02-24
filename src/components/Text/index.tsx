@@ -5,18 +5,18 @@ interface TextProps {
   children?: ReactNode
   $fontSize?: string
   $color?: string
-  fontWeigth?: number
+  fontweight?: number
 }
 
 export const Text = ({
   children,
   $color,
   $fontSize,
-  fontWeigth,
+  fontweight,
 }: TextProps) => {
   return (
     <>
-      <S.Text color={$color} fontSize={$fontSize} $fontWeigth={fontWeigth}>
+      <S.Text color={$color} fontSize={$fontSize} $fontweight={fontweight}>
         {children}
       </S.Text>
     </>

@@ -14,7 +14,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
   ({ error, className, rigthText, ...props }, ref) => {
     return (
       <S.InputWrapper className={className}>
-        <S.InputStyleContainer hasError={!!error}>
+        <S.InputStyleContainer $hasError={!!error}>
           <S.Input {...props} ref={ref} />
           {rigthText && <S.RightText>{rigthText}</S.RightText>}
         </S.InputStyleContainer>

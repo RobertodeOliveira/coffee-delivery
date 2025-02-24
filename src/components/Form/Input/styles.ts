@@ -21,15 +21,15 @@ const InputWrapper = styled.div`
 `
 
 interface InputStyleContainerProps {
-  hasError: boolean
+  $hasError: boolean
 }
 
 const InputStyleContainer = styled.div<InputStyleContainerProps>`
-  ${({ theme, hasError }) => css`
+  ${({ theme, $hasError }) => css`
     align-items: center;
     transition: 0.4s;
     overflow: hidden;
-    border: ${hasError ? `${theme.colors.base.error}` : ''};
+    border: ${$hasError ? `${theme.colors.base.error}` : ''};
     position: relative;
 
     &:focus-within {
