@@ -23,10 +23,10 @@ export const SectionTotalPrice = () => {
           <Text>3,50</Text>
         </S.Wrapper>
         <S.Wrapper>
-          <Text fontWeigth={700} $fontSize={defaultTheme.fontSizes.lg}>
+          <Text fontweight={700} $fontSize={defaultTheme.fontSizes.lg}>
             Total
           </Text>
-          <Text fontWeigth={700} $fontSize={defaultTheme.fontSizes.lg}>
+          <Text fontweight={700} $fontSize={defaultTheme.fontSizes.lg}>
             R$ {formatMoney(totalCart)}
           </Text>
         </S.Wrapper>

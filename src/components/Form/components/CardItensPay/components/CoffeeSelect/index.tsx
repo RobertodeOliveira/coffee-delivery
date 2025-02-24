@@ -44,7 +44,7 @@ export const SelectedCoffee = ({ coffee }: SelectedCoffeeProps) => {
             </Button>
           </S.WrapperButton>
         </S.Wrapper>
-        <Text fontWeigth={700} $fontSize="16px">
+        <Text fontweight={700} $fontSize="16px">
           R${formatMoney(coffeeTotal)}
         </Text>
       </S.Container>

@@ -5,16 +5,16 @@ import { defaultTheme } from '../../styles/themes/default'
 export type Colors = keyof typeof defaultTheme.colors.base
 export type FontSizes = keyof typeof defaultTheme.fontSizes
 
-interface ContaineProps {
+interface ContainerProps {
   $padding: string
   $borderRadius?: string
-  weigth?: number
+  weight?: number
   fontSize: FontSizes
-  color?: Colors
+  color: Colors
   $variant: ChipVariants
 }
 
-const Container = styled.div<ContaineProps>`
+const Container = styled.div<ContainerProps>`
   ${({
     theme,
     color,
@@ -22,7 +22,7 @@ const Container = styled.div<ContaineProps>`
     $borderRadius,
     $padding,
     fontSize,
-    weigth,
+    weight,
   }) => css`
     display: flex;
     background: ${theme.colors.brand[$variant]};
@@ -30,7 +30,7 @@ const Container = styled.div<ContaineProps>`
     border-radius: ${$borderRadius};
     padding: ${$padding};
     font-size: ${theme.fontSizes[fontSize]};
-    font-weight: ${weigth};
+    font-weight: ${weight};
 
     width: fit-content;
   `}

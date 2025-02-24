@@ -13,7 +13,7 @@ import havaiano from '../assets/Havaiano.svg'
 import arabe from '../assets/Arabe.svg'
 import irlandes from '../assets/Irlandes.svg'
 
-export type CardCoffeeList = {
+export type Coffee = {
   id: number
   image: string
   textChip: string[]
@@ -22,7 +22,7 @@ export type CardCoffeeList = {
   value: number
 }
 
-export const cardsCoffeeList: CardCoffeeList[] = [
+export const cardsCoffeeList: Coffee[] = [
   {
     id: 1,
     image: coffee,

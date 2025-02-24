@@ -6,7 +6,7 @@ export type ChipVariants = keyof typeof defaultTheme.colors.brand
 interface ChipProps {
   padding?: string
   borderRadius?: string
-  weigth?: number
+  weight?: number
   variant?: ChipVariants
   children: React.ReactNode
   color?: S.Colors
@@ -20,7 +20,7 @@ export const Chip = ({
   fontSize = 'xs',
   color = 'white',
   children,
-  weigth,
+  weight,
 }: ChipProps) => {
   return (
     <>
@@ -30,7 +30,7 @@ export const Chip = ({
         $padding={padding}
         color={color}
         fontSize={fontSize}
-        weigth={weigth}
+        weight={weight}
       >
         {children}
       </S.Container>

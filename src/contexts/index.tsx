@@ -1,8 +1,8 @@
 import { ReactNode, createContext, useEffect, useState } from 'react'
-import { CardCoffeeList } from '../mocks/cardCoffee'
+import { Coffee } from '../mocks/cardCoffee'
 import { produce } from 'immer'
 
-export interface CartItem extends CardCoffeeList {
+export interface CartItem extends Coffee {
   quantity: number
 }
 
